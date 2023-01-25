@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  database:
+    image: postgres:14.4
+    container_name: database
+    environment:
+      - POSTGRES_USER=ilya
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=market-data
+      - PGPORT=5432
+    ports:
+      - 5432:5432
